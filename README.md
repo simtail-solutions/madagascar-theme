@@ -15,3 +15,6 @@ You will also need the BrowserSync package installed globally with `npm install 
 locally with `npm install --save-dev grunt-browser-sync`
 
 **Important:** Remember to delete the .git directory and initialise your own git repo for individual websites projects.
+
+Other Notes:
+- change the `proxy` value in the BrowserSync options (in Gruntfile.js) to the URL of your projects test site.
