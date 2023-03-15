@@ -1,0 +1,37 @@
+{
+  "name": "madagascar-theme",
+  "nicename":"Madagascar Theme",
+  "version": "0.1.0",
+  "description": "Boilerplate Wordpress theme for Simtail websites",
+  "main": "style.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simtail-solutions/madagascar-theme.git"
+  },
+  "keywords": [
+    "Wordpress",
+    "Elementor",
+    "WooCommerce"
+  ],
+  "author": "Simtail",
+  "contributors": [{
+    "name": "Adam Trickett",
+    "email": "adam@simtail.com",
+    "url": "https://simtail.au"
+  }],
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/simtail-solutions/madagascar-theme/issues"
+  },
+  "homepage": "https://simtail.au",
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-dart-sass": "^2.0.1",
+    "sass": "^1.59.3"
+  }
+}
