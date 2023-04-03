@@ -55,7 +55,9 @@ module.exports = function (grunt) {
 				},
 				options: {
 					watchTask: true,
-					proxy: "local.dev"
+					proxy: {
+						target: "https://simtail-testing.local:14433/"
+					}
 				}
 			}
 		}

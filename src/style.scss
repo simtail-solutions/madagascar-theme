@@ -1,1 +1,77 @@
 @use 'reset';
+
+$mobile:768px;
+$tablet:1024px;
+$desktop:1440px;
+
+@mixin mobile {
+	@media (min-width: #{$mobile}) and (max-width: #{$tablet - 1px}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px})  {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop})  {
+		@content;
+	}
+}
+
+$simgreen: #6DF4CD;
+$simpink: #F890FF;
+$simred: #EF598C;
+$simgrey: #464a53;
+$simgrey_l: #d3d3d3;
+
+/* fallback layouts */
+
+div.simtail_wrap {
+	width:100vw;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content: space-between;
+
+	@include desktop { align-items: center;}
+
+	header {
+		height: 16vh;
+		background-color:$simgrey_l;
+		display:flex;
+		align-items:center;
+	}
+
+	main {
+		flex:1;
+		padding-top:2rem;
+		padding-bottom:2rem;
+		background-color:#eeeeee;
+	}
+
+	footer {
+		height: 10vh;
+		background-color:$simgrey;
+		display:flex;
+		align-items:center;
+		font-size:1.6rem;
+		color:#FFF;
+	}
+
+	header,
+	main,
+	footer {
+		width: 100%;
+		padding-left:2rem;
+		padding-right:2rem;
+		@include desktop { max-width: 1400px; }
+		@include tablet { max-width: 100%; }
+
+	}
+}
+
+/* now for some Elementor tomfoolery */

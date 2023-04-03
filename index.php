@@ -1,8 +1,15 @@
-<?php get_header(); ?>
-	<main id="simtailMain" class="simtail-main" role="main">
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<?php the_content(); ?>
-			<?php endwhile; ?>
-		<?php endif; ?>
-	</main>
-<?php get_footer(); ?>
+<?php
+
+	get_header();
+
+	if ( is_archive() || is_home() || is_search() ) {
+		get_template_part( 'fallback-template-parts/archive' );
+	} elseif ( is_singular() ) {
+		get_template_part( 'fallback-template-parts/single' );
+	} else {
+		get_template_part( 'fallback-template-parts/404' );
+	}
+	
+	get_footer();
+
+?>
